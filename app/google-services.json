@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085851265769",
+    "project_id": "bus-pass-925e8",
+    "storage_bucket": "bus-pass-925e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085851265769:android:ee024222d6fc9943a59e78",
+        "android_client_info": {
+          "package_name": "com.example.buspass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085851265769-lss2349f8rg4oeo3bpptr9l7pg2pvdo2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGrAfGOdkwTqlataxVbLmhsmLZDpk7lAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085851265769-lss2349f8rg4oeo3bpptr9l7pg2pvdo2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"
+        app:titleTextColor="#fff"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Apply E-Pass"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="110dp"
+            android:fontFamily="sans-serif"
+            android:textSize="15sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_weight="1"
+                                android:fontFamily="monospace"
+                                android:letterSpacing="0"
+                                android:padding="10dp"
+                                android:text="Apply For Pass"
+                                android:textColor="@color/purple_500"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/background" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Select Date"
+                            android:textColor="#000"
+                            android:textSize="15dp">
+                        </TextView>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dtview"
+                            android:text="choose date"
+                            android:focusable="false"
+                            android:layout_marginTop="10dp"
+                            android:inputType="none"></EditText>
+
+
+
+
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Adhare No"
+                            android:textColor="#000"
+                            android:textSize="15dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/proname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edit_text"
+                            android:drawableLeft="@drawable/ic_person"
+                            android:drawablePadding="12dp"
+                            android:ems="10"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="10dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Pass Type"
+                            android:textColor="#000"
+                            android:textSize="15dp"></TextView>
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="233dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/pass_type"
+                            android:padding="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingRight="12dp"
+                            android:prompt="@string/pass_type" />
+                        <!-- <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="320dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text"
+                            android:backgroundTint="#ffffff"
+                            android:elevation="4dp"
+                            android:orientation="horizontal"
+                            android:padding="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp">
+
+
+                            <RadioButton
+                                android:id="@+id/rb_student"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#6200EE"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:text="Student"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_employee"
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#6200EE"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:text="Employee"
+                                android:textColor="@color/black" />
+
+                        </RadioGroup>-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Bus Type"
+                            android:textColor="#000"
+                            android:textSize="15dp"></TextView>
+
+                        <!-- <RadioGroup
+                            android:id="@+id/radioGroup1"
+                            android:layout_width="336dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text"
+                            android:backgroundTint="#ffffff"
+                            android:elevation="4dp"
+                            android:orientation="horizontal"
+                            android:padding="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp">
+
+
+                            <RadioButton
+                                android:id="@+id/rb_BRTS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#6200EE"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:text="BRTS"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_AMTS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#6200EE"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:text="AMTS"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_ST"
+                                android:layout_width="77dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_weight="1"
+                                android:buttonTint="#6200EE"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:text="ST"
+                                android:textColor="@color/black" />
+
+                        </RadioGroup> -->
+
+                        <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="233dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:entries="@array/bus_type"
+                            android:padding="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingRight="12dp"
+                            android:prompt="@string/bus_type" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Period"
+                            android:textColor="#000"
+                            android:textSize="15dp"></TextView>
+
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="233dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/period"
+                            android:padding="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingRight="12dp"
+                            android:prompt="@string/period" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="College/Company Name"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edit_text"
+                            android:drawableLeft="@drawable/ic_home"
+                            android:drawablePadding="12dp"
+                            android:ems="10"
+                            android:hint="Name"
+                            android:inputType="number"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="10dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/Address"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/formupload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edit_text"
+                            android:drawableLeft="@drawable/ic_attach_file"
+                            android:drawablePadding="12dp"
+                            android:ems="10"
+                            android:hint="Form Upload"
+                            android:inputType="text"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="10dp" />
+
+
+                   <!--     <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Status"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/prostate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text"
+                            android:drawableLeft="@drawable/ic_access"
+                            android:drawablePadding="12dp"
+                            android:ems="10"
+                            android:hint="Status"
+                            android:inputType="text"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="10dp" />
+-->
+
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/button_bg"
+                            android:text="Submit"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
